@@ -1,0 +1,176 @@
+:root {
+  --background: #121214;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(149, 114, 252, 1) 0%,
+    rgba(67, 231, 173, 1) 50%,
+    rgba(226, 212, 92, 1) 100%
+  );
+  --primary-color: #ffffff;
+  --secondary-color: #a1a1aa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background: url(../img/fundo.png) no-repeat, var(--background);
+  background-position: top center;
+  font-family: "Inter", sans-serif;
+}
+
+header img {
+  animation: fromTop 0.7s 0.3s backwards;
+  background: var(--gradient);
+  border-radius: 50%;
+  margin: 32px auto;
+  padding: 4px;
+  width: 120px;
+
+  transition: transform 0.3s;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  animation: fromLeft 0.3s backwards;
+  background: var(--gradient);
+  border-radius: 10px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  padding-top: 4px;
+}
+
+section h2 {
+  color: var(--primary-color);
+  letter-spacing: -0.47px;
+}
+
+section p {
+  color: var(--secondary-color);
+  letter-spacing: -0.18px;
+  margin-bottom: 24px;
+}
+
+.conteudo {
+  background-color: #443e54;
+  border-radius: 8px;
+  padding: 24px 32px 32px 32px;
+}
+
+.conteudo ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  overflow-x: auto;
+  padding: 8px;
+}
+
+.conteudo ul li {
+  transition: transform 0.3s;
+}
+
+.conteudo ul li:hover {
+  transform: scale(1.1);
+}
+
+.games-list img {
+  max-width: 90px;
+  border-radius: 8px;
+}
+
+.streamers-list img {
+  max-width: 70px;
+  border-radius: 50%;
+}
+
+.social-list i {
+  font-size: 24px;
+}
+
+.fa-brands {
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.fa-twitch {
+  color: #9a35ff;
+}
+
+.fa-steam {
+  color: #111111;
+}
+
+.fa-youtube {
+  color: #f40000b9;
+}
+
+.fa-discord {
+  color: #5865f2;
+}
+
+.fa-playstation {
+  color: #006fcd;
+}
+
+footer {
+  color: var(--secondary-color);
+  margin-bottom: 32px;
+  text-align: center;
+}
+footer a {
+  color: rgba(149, 114, 252, 1);
+  text-decoration: none;
+}
+
+/* Animações */
+section:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+section:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+section:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
